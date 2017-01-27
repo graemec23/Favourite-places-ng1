@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html ng-app="app">
+  <head>
+    <meta charset="UTF-8">
+    <title>Favourite Places</title>
+    <base href="./" />
+  </head>
+  <body>
+    <div class="container">
+      <ui-view></ui-view>
+    </div>
+    <script type="text/javascript">
+       var assets = document.createElement('SCRIPT');
+       var src = 'assets/bundle.js';
+       if (typeof process.env.ENVIRONMENT !== 'undefined' && 'DEV' === process.env.ENVIRONMENT) {
+         src = 'http://localhost:8080/assets/bundle.js';
+       }
+       assets.src = src;
+       document.body.appendChild(assets);
+        //  require('./src/renderer/clipboard')
+        console.log(process.env.ENVIRONMENT)
+     </script>
+</body>
+</html>
