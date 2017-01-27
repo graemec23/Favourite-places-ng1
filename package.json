@@ -33,13 +33,15 @@
     "style-loader": "^0.13.1",
     "webpack": "^2.1.0-beta.28",
     "webpack-dev-server": "2.1.0-beta.10",
-    "webpack-validator": "^2.3.0"
+    "webpack-validator": "^2.3.0",
+    "menubar": "^5.2.0"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
     "angular": "^1.6.1",
     "angular-ui-router": "^0.4.1",
-    "bootstrap": "^3.3.7"
+    "bootstrap": "^3.3.7",
+
   }
 }
