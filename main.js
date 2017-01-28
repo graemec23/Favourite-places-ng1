@@ -61,18 +61,18 @@ app.on('activate', function () {
 
 // In this file you can include the rest of your app's specific main process
 // code. You can also put them in separate files and require them here.
-const mb = menubar({
-  'width': 500,
-  'height': 700,
-  'preload-window': true,
-  'resizable': false
-});
-mb.on('ready', function ready () {
-  console.log('app is ready')
-  // your app code here
-});
-
-
-ipcMain.on('quit', () => {
-  app.quit();
-});
+// const mb = menubar({
+//   'width': 500,
+//   'height': 700,
+//   'preload-window': true,
+//   'resizable': false
+// });
+// mb.on('ready', function ready () {
+//   console.log('app is ready')
+//   // your app code here
+// });
+// 
+// 
+// ipcMain.on('quit', () => {
+//   app.quit();
+// });

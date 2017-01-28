@@ -8,18 +8,16 @@ class LocalStorageFactory {
   
   get() {
   
-  try {
-    const serializedState = localStorage.getItem('state')
-    if (serializedState === null ){
-      return undefined
+    try {
+      const serializedState = localStorage.getItem('state')
+      if (serializedState === null ){
+        return undefined
+      }
+      return JSON.parse(serializedState)
+    
+    } catch (err) {
+      returned undefined
     }
-    return JSON.parse(serializedState)
-  
-  } catch (err) {
-    returned undefined
-  }
-
-
   }
   
   clearAll() {

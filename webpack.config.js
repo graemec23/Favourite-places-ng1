@@ -1,7 +1,7 @@
 const webpack = require('webpack');
 const path = require('path');
 
-module.exports =  {
+module.exports = {
   context: path.join(__dirname, '/src'),
   target: 'electron',
   entry: {
@@ -35,16 +35,18 @@ module.exports =  {
         ],
       },
       {
-        test: /\.css/,
+        test: /\.scss$/,
         use: [
           {
-            loader: 'css-loader',
+            loader: 'style-loader',
           },
+          'css-loader',
+          'sass-loader',
         ],
       },
     ],
   },
   devServer: {
-    contentBase: false
+    contentBase: path.join(__dirname, '/src'),
   },
 };
