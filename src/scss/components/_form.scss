@@ -1,0 +1,33 @@
+@include block(c-form) {
+  padding: 24px;
+   @include element(group){
+    @include element(input) {
+      width: 100%;
+      outline: 0;
+      border: none;
+      border-radius: 0;
+      box-shadow: 0;
+      border-bottom: 1px solid $divider-color;
+    }
+  
+  
+    @include modifier(error) {
+       @include element(input){
+        @include error($error-color);
+      }
+      @include element(message) {
+         @include error($error-color);
+      }
+
+    }
+  }
+  
+}
+
+input:-webkit-autofill,
+textarea:-webkit-autofill {
+  border-color: $divider-color;
+  -webkit-text-fill-color: $divider-color;
+  -webkit-box-shadow: 0 0 0px 1000px $primary-color-text inset;
+  transition: background-color 5000s ease-in-out 0s;
+}

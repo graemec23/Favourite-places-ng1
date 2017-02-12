@@ -6,7 +6,7 @@
     <base href="/" />
   </head>
   <body>
-    <div class="container">
+    <div class="o-container">
       <ui-view></ui-view>
     </div>
     <script>
@@ -14,6 +14,7 @@
        var src = 'assets/bundle.js';
        if (typeof process.env.ENVIRONMENT !== 'undefined' && 'DEV' === process.env.ENVIRONMENT) {
          src = 'http://localhost:8080/assets/bundle.js';
+         require('dotenv').load();
        }
        assets.src = src;
        document.body.appendChild(assets);

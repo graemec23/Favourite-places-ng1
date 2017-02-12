@@ -1,9 +1,11 @@
-routing.$inject = ['$urlRouterProvider', '$locationProvider'];
 
-export default function routing($urlRouterProvider, $locationProvider) {
+export default function routing($httpProvider, $urlRouterProvider, $locationProvider) {
   $locationProvider.html5Mode({
-    enabled: true,
+    enabled: false,
     requireBase: false,
   });
   $urlRouterProvider.otherwise('/');
+  //$httpProvider.interceptors.push('myInterceptor');
 }
+
+routing.$inject = ['$httpProvider', '$urlRouterProvider', '$locationProvider'];

@@ -13,3 +13,16 @@
   src: local('Roboto Bold'), local('Roboto-Bold'),
        url('https://fonts.gstatic.com/s/roboto/v15/d-6IYplOFocCacKzxwXSOD8E0i7KZn-EPnyo3HZu7kw.woff') format('woff');
 }
+
+
+$global-radius: 3px !default;
+$global-transition: all 300ms ease-in-out !default;
+
+html, body {
+  font-family: roboto, sans-serif;
+}
+
+
+ul {
+  list-style-type: none;
+}

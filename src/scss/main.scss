@@ -1,6 +1,53 @@
+// Setting
+@import 'node_modules/inuitcss/settings/settings.core';
 @import 'theme';
 @import 'global';
 
-body {
-  background: pink;
+
+// Tools
+@import 'node_modules/inuitcss/tools/tools.font-size';
+@import 'node_modules/inuitcss/tools/tools.clearfix';
+@import 'tools/bem';
+@import 'tools/font-face';
+@import 'tools/hidden';
+@import 'tools/svg-icon';
+@import 'tools/prefix';
+@import 'tools/error';
+
+// Generic
+@import 'node_modules/inuitcss/generic/generic.box-sizing';
+@import 'generic/normalize';
+@import 'node_modules/inuitcss/generic/generic.reset';
+
+// Elements
+@import 'node_modules/inuitcss/elements/elements.page';
+@import 'node_modules/inuitcss/elements/elements.headings';
+
+
+// Objects
+@import 'node_modules/inuitcss/objects/objects.layout';
+@import 'node_modules/inuitcss/objects/objects.media';
+@import 'node_modules/inuitcss/objects/objects.flag';
+@import 'node_modules/inuitcss/objects/objects.list-bare';
+@import 'node_modules/inuitcss/objects/objects.list-inline';
+@import 'node_modules/inuitcss/objects/objects.box';
+@import 'node_modules/inuitcss/objects/objects.block';
+@import 'node_modules/inuitcss/objects/objects.wrapper';
+
+
+// Components
+@import 'components/header';
+@import 'components/addAddress';
+@import 'components/addressList';
+@import 'components/buttons';
+@import 'components/form';
+
+// Utilities
+@import 'node_modules/inuitcss/utilities/utilities.widths';
+@import 'node_modules/inuitcss/utilities/utilities.headings';
+@import 'node_modules/inuitcss/utilities/utilities.spacing';
+@import 'node_modules/inuitcss/utilities/utilities.hide';
+
+.o-container {
+  background-color: $primary-color-text;
 }

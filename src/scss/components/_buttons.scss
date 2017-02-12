@@ -1,0 +1,39 @@
+.c-btn {
+  display: inline-block; /* [1] */
+  vertical-align: middle; /* [2] */
+  font: inherit; /* [3] */
+  text-align: center; /* [4] */
+  margin: 0; /* [4] */
+  cursor: pointer; /* [5] */
+  outline: none;
+  padding: $inuit-global-spacing-unit-small $inuit-global-spacing-unit;
+  transition: $global-transition;
+  border-radius: $global-radius;
+}
+
+
+
+
+
+/* Style variants
+   ========================================================================== */
+
+.c-btn--primary {
+  background-color: $accent-color;
+  border: none;
+
+  &,
+  &:hover,
+  &:active,
+  &:focus {
+    text-decoration: none; /* [4] */
+    color: $primary-color-text;
+  }
+
+    
+  &:disabled {
+    pointer-events: none;
+    opacity: 80%;    
+  }
+
+}

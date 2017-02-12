@@ -1,8 +1,17 @@
-<div class="jumbotron">
-  <h1>Hello, {{home.name}}</h1>
-  <p>
-    <!-- {{home.addressList}} -->
-  </p>
-</div>
 
-<button class="btn btn-primary" ng-click="home.changeName()">Change</button>
+<common-header></common-header>
+<div class="o-wrapper">
+  <div class="o-layout">
+    <div class="o-layout__item u-1/1">
+      <add-address></add-address>
+      <!-- <address-list></address-list> -->
+      <!-- <div class="o-layout__item u-1/1 u-margin-top">
+      <fieldset class="c-form__group">
+      <label>First Line</label>
+      <input ng-model="ctrl.line1" />
+      </fieldset>
+      </div> -->
+    </div>
+  </div>
+
+</div>

@@ -1,0 +1,15 @@
+
+.c-header {
+  color: $primary-color-text;
+}
+
+
+.c-header__status-bar {
+  height: 25px;
+  background-color: $primary-color-dark;
+}
+
+.c-header__headline {
+  background-color: $primary-color;
+  padding: 30px;
+}

@@ -1,0 +1,8 @@
+@include block(c-addressList) {
+  margin-bottom: 30px;
+  border-bottom: 1px solid $divider-color;
+  
+  @include element(item) {
+  
+  }
+}

@@ -1,30 +1,27 @@
 import angular from 'angular';
 
 class LocalStorageFactory {
-  
+
   set(key, value) {
     localStorage.setItem(key, value);
   }
-  
-  get() {
-  
+
+  get(){
     try {
-      const serializedState = localStorage.getItem('state')
-      if (serializedState === null ){
-        return undefined
+      const serializedState = localStorage.getItem('addresses');
+      if (serializedState === null) {
+        return undefined;
       }
-      return JSON.parse(serializedState)
-    
+      return JSON.parse(serializedState);
     } catch (err) {
-      returned undefined
+      return undefined;
     }
   }
-  
+
   clearAll() {
     localStorage.clear();
-  }  
+  }
 }
 
 export default angular.module('services.localStorageFactory', [])
-  .service('localStorageFactory', LocalStorageFactory)
-  .name;
+.service('localStorageFactory', LocalStorageFactory).name;

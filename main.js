@@ -14,9 +14,14 @@ const url = require('url')
 // be closed automatically when the JavaScript object is garbage collected.
 let mainWindow
 
-function createWindow () {
+function createWindow() {
   // Create the browser window.
-  mainWindow = new BrowserWindow({width: 800, height: 600})
+  mainWindow = new BrowserWindow({
+    titleBarStyle: 'hidden',
+    width: 800,
+    height: 600,
+    backgroundColor: '#312450'
+  })
 
   // and load the index.html of the app.
   mainWindow.loadURL(url.format({
@@ -34,6 +39,14 @@ function createWindow () {
     // in an array if your app supports multi windows, this is the time
     // when you should delete the corresponding element.
     mainWindow = null
+  })
+  
+  mainWindow.webContents.on('crashed', function (err) {
+    console.log('err', err);
+  })
+  
+  mainWindow.on('unresponsive', function (err) {
+    console.log('un', err);
   })
 }
 
@@ -58,6 +71,11 @@ app.on('activate', function () {
     createWindow()
   }
 })
+
+process.on('uncaughtException', function (err) {
+  console.log('uncaught', err);
+})
+
 
 // In this file you can include the rest of your app's specific main process
 // code. You can also put them in separate files and require them here.

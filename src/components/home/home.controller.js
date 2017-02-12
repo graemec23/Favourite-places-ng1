@@ -1,6 +1,6 @@
 export default class HomeController {
   constructor() {
-    this.name = 'da';
+    this.name = 'tutti';
     // this.address = postCodeApi;
     // this.addressList = this.address.getAddress();
   }
